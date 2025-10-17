@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedComplyAI — AI-Powered Audit Readiness for FDA & ISO Compliance</title>
+  <meta name="description" content="MedComplyAI helps medical device companies automate audit readiness for FDA 21 CFR 820 and ISO 13485—securely analyzing documents in your Box folders.">
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind (CDN for MVP; use a build setup for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: { DEFAULT: '#004E89', light:'#5bc0ff', dark:'#003B68' },
+            accent: { DEFAULT: '#00BFA6' }
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(2, 38, 89, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* nice gradient bg behind hero */
+    .hero-bg {
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(91,192,255,.25), transparent 60%),
+                  radial-gradient(1000px 700px at -10% 10%, rgba(0,191,166,.15), transparent 60%),
+                  linear-gradient(180deg, #ffffff 0%, #F8FAFC 100%);
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-800">
+
+  <!-- Header -->
+  <header class="hero-bg border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-5">
+        <a href="#" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-brand flex items-center justify-center text-white font-extrabold">M</div>
+          <div class="text-lg font-extrabold tracking-tight">MedComplyAI</div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#how" class="hover:text-brand">How it works</a>
+          <a href="#why" class="hover:text-brand">Why MedComplyAI</a>
+          <a href="#about" class="hover:text-brand">About</a>
+          <a href="#contact" class="hover:text-brand">Contact</a>
+          <a href="#" class="rounded-lg px-4 py-2 bg-brand text-white hover:bg-brand/90 shadow-soft">Request Early Access</a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-slate-300" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 space-y-2 text-sm">
+        <a href="#how" class="block py-2">How it works</a>
+        <a href="#why" class="block py-2">Why MedComplyAI</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#contact" class="block py-2">Contact</a>
+        <a href="#" class="block py-2 rounded-lg text-center bg-brand text-white">Request Early Access</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center py-14 lg:py-20">
+          <div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              AI-Powered Audit Readiness for <span class="text-brand">FDA &amp; ISO</span> Compliance
+            </h1>
+            <p class="mt-5 text-lg text-slate-600">
+              Streamline your quality documentation, detect compliance gaps, and be audit-ready—without manual reviews.
+              Works with your <span class="font-semibold text-slate-800">Box</span> folders. No document uploads.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#" class="inline-flex items-center justify-center rounded-lg px-5 py-3 bg-brand text-white font-semibold hover:bg-brand/90 shadow-soft">
+                Request Early Access
+              </a>
+              <a href="#" class="inline-flex items-center justify-center rounded-lg px-5 py-3 border border-slate-300 font-semibold hover:bg-slate-50">
+                View Demo
+              </a>
+            </div>
+
+            <div class="mt-6 flex items-center gap-4 text-xs text-slate-500">
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2.5 w-2.5 rounded-full bg-accent"></span> Zero-copy analysis
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2.5 w-2.5 rounded-full bg-brand"></span> Read-only Box access
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="inline-block h-2.5 w-2.5 rounded-full bg-slate-400"></span> AES-256 at rest
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero visual -->
+          <div class="relative">
+            <div class="relative rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+              <!-- Placeholder dashboard mock -->
+              <div class="rounded-xl bg-slate-50 p-4">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold">Compliance Overview</h3>
+                  <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Beta</span>
+                </div>
+                <div class="mt-4 grid grid-cols-3 gap-4">
+                  <div class="rounded-lg p-4 bg-white border border-slate-200">
+                    <div class="text-xs text-slate-500">Overall Score</div>
+                    <div class="mt-2 text-3xl font-extrabold">82%</div>
+                  </div>
+                  <div class="rounded-lg p-4 bg-white border border-slate-200">
+                    <div class="text-xs text-slate-500">FDA 21 CFR 820</div>
+                    <div class="mt-2 text-2xl font-extrabold text-brand">83%</div>
+                  </div>
+                  <div class="rounded-lg p-4 bg-white border border-slate-200">
+                    <div class="text-xs text-slate-500">ISO 13485</div>
+                    <div class="mt-2 text-2xl font-extrabold text-brand">77%</div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <div class="text-sm font-semibold mb-2">Top Gaps</div>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>
+                      Clause 7.3.2 — Design &amp; Development Planning (partial coverage)
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-2 w-2 rounded-full bg-rose-500"></span>
+                      CAPA linkage to Risk File missing in 2 documents
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>
+                      Supplier control evidence outdated (>12 months)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -z-10 -bottom-8 -left-6 h-44 w-44 rounded-3xl bg-accent/20 blur-2xl"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Why MedComplyAI -->
+  <section id="why" class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Built by Medical Device Quality Experts. Powered by AI.</h2>
+      <p class="mt-3 text-slate-600 text-center max-w-3xl mx-auto">
+        MedComplyAI analyzes your SOPs, CAPAs, DHFs, and Risk files against FDA 21 CFR 820 and ISO 13485—then surfaces clause-level gaps with clear, explainable findings.
+      </p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white shadow-soft">
+          <div class="h-10 w-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center font-extrabold">1</div>
+          <h3 class="mt-4 font-semibold text-lg">Automated Compliance Review</h3>
+          <p class="mt-2 text-slate-600">Semantic matching maps documents to relevant clauses—flagging missing or weak coverage with evidence snippets.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white shadow-soft">
+          <div class="h-10 w-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center font-extrabold">2</div>
+          <h3 class="mt-4 font-semibold text-lg">Audit-Ready Reports</h3>
+          <p class="mt-2 text-slate-600">Export clean PDF summaries and traceability CSVs with direct links back to your Box file versions.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 bg-white shadow-soft">
+          <div class="h-10 w-10 rounded-lg bg-brand/10 text-brand flex items-center justify-center font-extrabold">3</div>
+          <h3 class="mt-4 font-semibold text-lg">Secure by Design</h3>
+          <p class="mt-2 text-slate-600">Zero-copy analysis: we don’t store your source documents—only metadata and findings. Read-only Box access with easy revocation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 lg:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Connect. Scan. Review. Report.</h2>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="rounded-xl bg-white border border-slate-200 p-6 shadow-soft">
+          <div class="text-xs font-semibold text-brand">Step 1</div>
+          <h3 class="font-semibold mt-1">Connect Box Folder</h3>
+          <p class="mt-2 text-slate-600">OAuth sign-in with read-only scope to specific folders (QMS, DHF, Risk, CAPA).</p>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-6 shadow-soft">
+          <div class="text-xs font-semibold text-brand">Step 2</div>
+          <h3 class="font-semibold mt-1">Scan Documentation</h3>
+          <p class="mt-2 text-slate-600">AI parses PDFs/DOCX, chunks content, embeds, and maps to FDA/ISO clauses.</p>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-6 shadow-soft">
+          <div class="text-xs font-semibold text-brand">Step 3</div>
+          <h3 class="font-semibold mt-1">Review Findings</h3>
+          <p class="mt-2 text-slate-600">See compliance scores and drill into clause-level evidence and remediation tips.</p>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-6 shadow-soft">
+          <div class="text-xs font-semibold text-brand">Step 4</div>
+          <h3 class="font-semibold mt-1">Export Report</h3>
+          <p class="mt-2 text-slate-600">Generate audit readiness PDFs and traceability CSVs for internal/external reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 lg:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Your AI Co-Pilot for FDA 21 CFR 820 & ISO 13485 Audit Readiness</h2>
+      <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+        Founded by medical device quality veterans with 20+ years of experience, MedComplyAI helps growing medtech teams stay compliant without the manual document grind. 
+        We complement your QMS by analyzing documents where they live—inside your Box environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="py-14 bg-gradient-to-br from-brand to-accent text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl sm:text-3xl font-extrabold">Be Audit-Ready in Hours, Not Weeks.</h3>
+      <p class="mt-2 text-white/90">Join the early-access program and help shape the future of AI-assisted compliance.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="inline-flex items-center justify-center rounded-lg px-6 py-3 bg-white text-brand font-semibold hover:bg-slate-100">Join Beta</a>
+        <a href="#" class="inline-flex items-center justify-center rounded-lg px-6 py-3 border border-white/30 font-semibold hover:bg-white/10">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Lead capture -->
+  <section id="contact" class="py-16 lg:py-20 bg-slate-50">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Request Early Access</h2>
+      <p class="mt-2 text-slate-600">Leave your details and we’ll reach out with a demo and onboarding details.</p>
+
+      <!-- Replace action with your Supabase edge function / form handler -->
+      <form action="#" method="post" class="mt-8 grid gap-3 sm:grid-cols-3">
+        <input type="text" name="name" placeholder="Full name" class="sm:col-span-1 col-span-3 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40" required>
+        <input type="email" name="email" placeholder="Work email" class="sm:col-span-1 col-span-3 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40" required>
+        <input type="text" name="company" placeholder="Company" class="sm:col-span-1 col-span-3 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40" required>
+        <button type="submit" class="sm:col-span-3 inline-flex items-center justify-center rounded-lg px-6 py-3 bg-brand text-white font-semibold hover:bg-brand/90 shadow-soft">Request Access</button>
+      </form>
+
+      <p class="mt-3 text-xs text-slate-500">By submitting, you agree to our <a href="#" class="underline hover:no-underline">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-xl bg-brand text-white flex items-center justify-center font-extrabold">M</div>
+            <div class="text-lg font-extrabold">MedComplyAI</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 max-w-md">
+            AI-assisted analysis for internal audit readiness. Results are advisory and do not constitute legal or regulatory certification.
+          </p>
+        </div>
+
+        <div>
+          <div class="text-sm font-semibold mb-3">Company</div>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#about" class="hover:text-brand">About</a></li>
+            <li><a href="#how" class="hover:text-brand">How it works</a></li>
+            <li><a href="#contact" class="hover:text-brand">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold mb-3">Legal</div>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-brand">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-brand">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brand">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span>© 2025 MedComplyAI. All rights reserved.</span>
+        <span>Built for medical device teams — FDA 21 CFR 820 & ISO 13485 support.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

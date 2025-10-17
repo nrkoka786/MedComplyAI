@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy • MedComplyAI</title>
+  <meta name="description" content="Privacy Policy for MedComplyAI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily:{ sans:['Inter','ui-sans-serif','system-ui'] },
+        colors:{ brand:{DEFAULT:'#004E89'}, accent:{DEFAULT:'#00BFA6'} }
+      }}
+    }
+  </script>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-brand text-white flex items-center justify-center font-extrabold">M</div>
+        <span class="font-extrabold">MedComplyAI</span>
+      </a>
+      <nav class="text-sm flex gap-6">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html" class="text-brand font-semibold">Privacy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-slate">
+    <h1>Privacy Policy</h1>
+    <p><em>Effective date: {{MM DD, 2025}}</em></p>
+
+    <h2>Overview</h2>
+    <p>This Privacy Policy explains how MedComplyAI (“we”, “us”) collects, uses, and protects personal information when you use our website and services.</p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li><strong>Account & Contact Data:</strong> name, email, company.</li>
+      <li><strong>Usage Data:</strong> log events, device/browser info, pages viewed.</li>
+      <li><strong>Customer Content:</strong> documents accessed through integrations (e.g., Box) strictly to provide the Service. We access only folders you authorize.</li>
+      <li><strong>Support Communications:</strong> messages you send to us.</li>
+    </ul>
+
+    <h2>How We Use Information</h2>
+    <ul>
+      <li>Provide and improve the Service, including document analysis and report generation.</li>
+      <li>Authenticate users and secure accounts.</li>
+      <li>Communicate with you about product updates and support.</li>
+      <li>Comply with legal obligations.</li>
+    </ul>
+
+    <h2>Data Processing & Retention</h2>
+    <p>We minimize data retention. Source documents from Box are processed with read-only, zero-copy access; we store only metadata, findings, and generated reports as needed for your use. You may request deletion at any time via <a href="mailto:privacy@medcomplyai.com">privacy@medcomplyai.com</a>.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>We rely on trusted processors (e.g., Box, Vercel, Supabase, and cloud AI providers) to deliver the Service. These providers are contractually bound to protect data and act on our instructions.</p>
+
+    <h2>Security</h2>
+    <p>We use encryption in transit and at rest where applicable, strict access controls, and audit logging. No method of transmission or storage is 100% secure, but we continuously improve our safeguards.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have rights to access, correct, delete, or restrict processing of your personal data. Contact us at <a href="mailto:privacy@medcomplyai.com">privacy@medcomplyai.com</a>.</p>
+
+    <h2>Children’s Privacy</h2>
+    <p>The Service is not directed to children under 16 and we do not knowingly collect their data.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this Policy from time to time. We will post the updated date at the top and, when appropriate, notify you.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email <a href="mailto:privacy@medcomplyai.com">privacy@medcomplyai.com</a>.</p>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <span>© 2025 MedComplyAI. All rights reserved.</span>
+      <nav class="flex gap-4">
+        <a href="/terms.html" class="hover:text-brand">Terms</a>
+        <a href="/disclaimer.html" class="hover:text-brand">Disclaimer</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
